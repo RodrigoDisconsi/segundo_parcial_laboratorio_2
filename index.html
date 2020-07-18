@@ -1,0 +1,93 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Parcial</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="./Clases/Vehiculo.js"></script>
+    <script src="./Clases/Auto.js"></script>
+    <script src="./Clases/Camioneta.js"></script>
+    <script src="./Clases/main.js"></script>
+</head>
+
+<body>
+    <div id="contenedor">
+        <button class="alta" id="btnAlta">Alta</button>
+        <div id="contenedorAlta" class="contenedor" hidden>
+            <button id="btnCerrar" class="cerrar">x</button>
+            <br>
+            <br>
+            <label for="">Id</label>
+            <input type="text" disabled>
+            <br>
+            <label for="marca">Marca</label>
+            <br>
+            <input type="text" id="marca" name="marca" class="sinError">
+            <br>
+            <label for="modelo">Modelo</label>
+            <input type="text" id="modelo" name="modelo" class="sinError">
+            <br>
+            <br>
+            <label for="precio">Precio</label>
+            <input type="number" id="precio" name="precio" class="sinError">
+            <br>
+            <select name="tipo" id="tipo">
+                <option value="Auto">Auto</option>
+                <option value="Camioneta">Camioneta</option>
+            </select>
+
+            <div id="auto">
+                <label for="cantidadPuertas">Cantidad de Puertas</label>
+                <input type="number" id="cantidadPuertas" name="cantidadPuertas" class="sinError">
+            </div>
+
+            <div id="camioneta" hidden>
+                <input type="checkbox" id="cuatroXcuatro" name="cuatroXcuatro">
+                <label for="cuatroXcuatro">4x4</label>
+            </div>
+            <div>
+                <input type="button" value="Agregar" class="agregar" id="btnAgregar">
+            </div>
+        </div>
+
+        <div>
+            <h2>Campos a mostrar</h2>
+            <input type="checkbox" id="idCheck" name="id" checked>
+            <label for="idCheck">Id</label>
+            <input type="checkbox" id="marcaCheck" name="marca" checked>
+            <label for="marcaCheck">Marca</label>
+            <input type="checkbox" id="modeloCheck" name="modelo" checked>
+            <label for="modeloCheck">Modelo</label>
+            <input type="checkbox" id="precioCheck" name="precio" checked>
+            <label for="precioCheck">Precio</label>
+        </div>
+
+        <hr>
+        <div class="contenedorVehiculos">
+            <h1>Lista de Vehiculos</h1>
+        </div>
+        <hr>
+        
+        <div>
+            <input class="filter" type="text" name="filter" id="filter" placeholder="Modelo...">
+            <input type="button" name="promedio" id="btnPromedio" class="promedio" value="Promedio">
+            <table id ="tabla">
+                <thead>
+                    <tr>
+                        <th name="idTabla">Id</th>
+                        <th name="marcaTabla">Marca</th>
+                        <th name="modeloTabla">Modelo</th>
+                        <th name="precioTabla">Precio</th>
+                        <th>Accion</th>
+                    </tr>
+                </thead>
+                <tbody id="tCuerpo">
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+
+</html>
